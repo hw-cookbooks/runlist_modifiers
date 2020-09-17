@@ -75,7 +75,7 @@ end
 
 # Let the override be applied to any new instantiations
 Chef::Mixin::LanguageIncludeRecipe.include RunlistModifiers::IncludeRecipe
-Chef::Recipe.include RunlistModifiers::IncludeRecipe
+Chef::DSL::Recipe.include RunlistModifiers::IncludeRecipe
 
 # Force the override into any existing instantiations
 ObjectSpace.each_object(Chef::RunContext) do |instance|
